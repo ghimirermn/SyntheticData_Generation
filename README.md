@@ -18,19 +18,16 @@ Typical workflow:
 ```
 SyntheticData_Generation/
 ├── diffusion_scene_editing/
-│   ├── 01_generate_masks.py          # Extracts per-class binary masks
-│   ├── 02_prompt_variations.py       # Defines semantic prompts for each label
-│   ├── 03_diffusion_inpaint.py       # Runs Stable Diffusion Inpainting per region
-│   └── 04_generate_synthetic_data.py # Full pipeline combining all steps
+│   ├── coco_to_mask.py               # Extracts per-class binary masks
+│   ├── inpainting_pipeline.py        # Runs Stable Diffusion Inpainting per region
 │
 ├── assets/
-│   ├── input_image.jpg               # Example source image
-│   ├── mask_0.png                    # Multi-class mask
-│   └── labels.json                   # Label definitions (for example, {1: "car", 2: "sky"})
+│   ├── scene.jpg                     # Example source image
+│   └── result_coco.json              # Label definitions (for example, {1: "car", 2: "sky"})
 │
 ├── outputs/
-│   ├── variations/                   # Generated image outputs
-│   └── logs/                         # Prompt and seed history
+│   ├── demo.gif                      # Generated image outputs in gif format
+│   ├── mask_0.png                    # Multi-class mask
 │
 ├── requirements.txt
 └── README.md
