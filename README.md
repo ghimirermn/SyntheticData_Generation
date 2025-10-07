@@ -75,5 +75,5 @@ pip install -r requirements.txt
 
 ## Example Output
 
-![Example synthetic variation](https://github.com/ghimirermn/SyntheticData_Generation/blob/main/assets/demo.gif)
+![Example synthetic variation](https://github.com/ghimirermn/SyntheticData_Generation/blob/main/output/demo.gif)
 
