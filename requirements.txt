@@ -1,0 +1,7 @@
+torch
+diffusers
+transformers
+Pillow
+numpy
+matplotlib
+huggingface_hub
