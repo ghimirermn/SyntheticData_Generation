@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw
 from pathlib import Path
 from .utils import visualize_mask, save_mask
 
-def coco_to_multiclass(json_path, output_dir="outputs/masks", visualize=True):
+def coco_to_multiclass(json_path, output_dir="outputs", visualize=True):
     """
     Converts COCO-format segmentation annotations into multi-class masks.
     """
