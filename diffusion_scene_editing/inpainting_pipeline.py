@@ -61,7 +61,7 @@ def inpaint_stage(pipe, current_image, mask_array, label_id, prompt, steps=20, g
 
 def run_scene_editing(
     image_path="assets/scene.jpg",
-    mask_path="assets/mask_0.png",
+    mask_path="outputs/mask_0.png",
     output_dir="outputs",
     num_images=10,
     seed=42,
