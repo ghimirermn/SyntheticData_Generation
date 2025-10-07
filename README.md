@@ -57,15 +57,23 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Place your input image and multi-class mask inside the `assets/` folder.
-2. Modify prompts and label maps in `02_prompt_variations.py`.
-3. Run:
+1. Place your input image and COCO annotation in `assets/`.
+2. Generate the segmentation mask:
+
+   ```bash
+   python diffusion_scene_editing/01_generate_masks.py
+   ```
+
+   The mask will be saved in `outputs/mask_0.png`.
+3. Modify prompts and label maps in `02_prompt_variations.py`.
+4. Run the full inpainting pipeline:
 
    ```bash
    python diffusion_scene_editing/04_generate_synthetic_data.py
    ```
-4. Generated outputs will be stored in `outputs/variations/`.
+5. Generated images will appear in `outputs/variations/`.
 
 ## Example Output
 
-![Example synthetic variation](https://github.com/ghimirermn/SyntheticData_Generation/blob/main/assets/sample_output.gif)
+![Example synthetic variation](https://github.com/ghimirermn/SyntheticData_Generation/blob/main/assets/demo.gif)
+
