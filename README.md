@@ -19,7 +19,7 @@ Typical workflow:
 SyntheticData_Generation/
 ├── diffusion_scene_editing/
 │   ├── coco_to_mask.py               # Extracts per-class binary masks
-│   ├── inpainting_pipeline.py        # Runs Stable Diffusion Inpainting per region
+│   └── inpainting_pipeline.py        # Runs Stable Diffusion Inpainting per region
 │
 ├── assets/
 │   ├── scene.jpg                     # Example source image
@@ -27,7 +27,7 @@ SyntheticData_Generation/
 │
 ├── outputs/
 │   ├── demo.gif                      # Generated image outputs in gif format
-│   ├── mask_0.png                    # Multi-class mask
+│   └── mask_0.png                    # Multi-class mask
 │
 ├── requirements.txt
 └── README.md
@@ -58,17 +58,16 @@ pip install -r requirements.txt
 2. Generate the segmentation mask:
 
    ```bash
-   python diffusion_scene_editing/01_generate_masks.py
+   python diffusion_scene_editing/coco_to_mask.py
    ```
 
    The mask will be saved in `outputs/mask_0.png`.
-3. Modify prompts and label maps in `02_prompt_variations.py`.
-4. Run the full inpainting pipeline:
+3. Run the full inpainting pipeline:
 
    ```bash
-   python diffusion_scene_editing/04_generate_synthetic_data.py
+   python diffusion_scene_editing/inpainting_pipeline.py
    ```
-5. Generated images will appear in `outputs/variations/`.
+5. Generated images will appear in `outputs/`.
 
 ## Example Output
 
